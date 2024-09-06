@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Navbar from './Navbar';
 import Logo from "../assets/nnlogo.svg";
 
 export default function Contacts({ contacts, changeChat }) {
@@ -22,11 +21,10 @@ export default function Contacts({ contacts, changeChat }) {
     <>
       {currentUserImage && currentUserImage && (
         <Container>
-           <Navbar />
-          <div className="brand">
-          <img src={Logo} alt="logo" />
-          <h1>++</h1>
-          </div>
+          
+          {/* <div className="brand">
+         
+          </div> */}
           <div className="contacts">
             {contacts.map((contact, index) => {
               return (
@@ -50,7 +48,7 @@ export default function Contacts({ contacts, changeChat }) {
               );
             })}
           </div>
-          <div className="current-user">
+          {/* <div className="current-user">
             <div className="avatar">
               <img
                 src={`data:image/svg+xml;base64,${currentUserImage}`}
@@ -60,7 +58,7 @@ export default function Contacts({ contacts, changeChat }) {
             <div className="username">
               <h2>{currentUserName}</h2>
             </div>
-          </div>
+          </div> */}
         </Container>
       )}
     </>
@@ -68,7 +66,7 @@ export default function Contacts({ contacts, changeChat }) {
 }
 const Container = styled.div`
   display: grid;
-  grid-template-rows: 10% 75% 15%;
+  grid-template-rows:  95% 5%;
   overflow: hidden;
   background-color: #080420;
   .brand {
@@ -135,6 +133,7 @@ const Container = styled.div`
     background-color: #0d0d30;
     display: flex;
     justify-content: center;
+    height : 7rem;
     align-items: center;
     gap: 2rem;
     .avatar {

@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { allUsersRoute, host } from "../utils/APIRoutes";
 import ChatContainer from "../components/ChatContainer";
 import Contacts from "../components/Contacts";
+import Navbar from '../components/Navbar';
 import Welcome from "../components/Welcome";
 
 export default function Chat() {
@@ -47,6 +48,7 @@ export default function Chat() {
   };
   return (
     <>
+       <Navbar />
       <Container>
         <div className="container">
           <Contacts contacts={contacts} changeChat={handleChatChange} />
@@ -62,7 +64,7 @@ export default function Chat() {
 }
 
 const Container = styled.div`
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -71,8 +73,8 @@ const Container = styled.div`
   align-items: center;
   background-color: #131324;
   .container {
-    height: 85vh;
-    width: 85vw;
+    height: 90vh;
+    width: 100vw;
     background-color: #00000076;
     display: grid;
     grid-template-columns: 25% 75%;
